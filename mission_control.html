@@ -1,0 +1,54 @@
+<!--Jake Fusco-->
+<!DOCType html>
+<html>
+    <body>
+            <!--Style Guide For Header-->
+            <style>
+                    #header {
+                        background-color: darkblue;
+                        color: yellow;
+                        padding: 80px;
+                        text-align: center;
+                    }
+                </style>
+        <!--Header-->
+        <h1 id="header"> UATSpace Mission Control Blastoff</h1>
+        <!--Banner Image-->
+        <img src="uatspace.png" alt="UATSpace" width="1500" height="700">
+        <!--Button that holds the function-->
+
+            <h1> CountdownTimer</h1>
+            <button onclick="countdown()" > Click Here to Blast Off</button>
+            <p id = "CountdownTimer"> Mission Control please countdown to blastoff...</p>
+
+
+            <script>
+            var count = 50;
+            for (i = 0; i < 51; i = i+5){
+                if (i == 50){
+                    {setTimeout(function() {
+                    document.getElementById("CountdownTimer").innerHTML = "Blastoff!";
+                    count = count - 5;
+                }, 1000 * i)
+
+            }
+                }
+                if (i >= 25){
+                    {setTimeout(function() {
+                    document.getElementById("CountdownTimer").innerHTML = "Warning! Blastoff countdown halfway done! Reamaining Time: " + count;
+                    count = count - 5;
+                }, 1000 * i)
+
+            }
+                }
+
+                else{setTimeout(function() {
+                    document.getElementById("CountdownTimer").innerHTML = count;
+                    count = count - 5;
+                }, 1000 * i)
+
+            }
+            }   
+        </script>
+    </body>
+</html>
